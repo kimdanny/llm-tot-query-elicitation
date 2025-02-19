@@ -16,6 +16,21 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Static variable TEMPLATE for prompting
+TEMPLATE_0 = """
+Let’s say I forgot the name of a {topic}, {ToTObject}, and I'm trying to find the name by writing a verbose post to an online community forum. In the post, I will describe what I remember about {ToTObject}. The post can include:
+1. My own contextual memories from the past, e.g., "When I was young, …"
+2. Comparisons with other people,
+3. Mentions of uncertainty, e.g., "I’m not sure if it is true, but …"
+4. Factually false memories,
+5. Mentions of exclusion criteria, e.g., "its name is definitely not ..."
+
+Pretend that you completely forgot the {topic} name ({ToTObject}), and write a verbose post that other community members can help you recall the name. Here are some rules when writing the post:
+1. Never mention the exact name {ToTObject}.
+2. Do not write a post like a letter - No "hello" and "goodbye".
+3. Everyone who reads the post assumes that you forgot the name. Do not write long lines describing you forgot that. Go straight to explaining it.
+4. Write about 200 words.
+"""
+
 TEMPLATE_1 = """
 Let’s say I forgot the name of a {topic}, {ToTObject}, and I'm trying to find the name by writing a verbose post to an online community forum. In the post, I will describe what I remember about {ToTObject}. The post can include:
 1. My own contextual memories from the past, e.g., "When I was young, …"
