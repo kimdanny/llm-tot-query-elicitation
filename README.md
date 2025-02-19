@@ -1,3 +1,21 @@
+# Dataset of LLM-Elicited TOT Queries
+The final dataset of LLM-elicited TOT queries described in our paper is available at [Dataset](data/synthetic_queries_movie_landmark_person.jsonl). It contains 450 synthetically generated queries based on entities sampled from Wikipedia, with an equal distribution across three domains: Movie, Landmark, and Person (150 queries per domain).
+
+## Dataset Structure
+
+Each entry in the dataset includes the following fields:
+
+- `query`: The generated TOT query  
+- `entityName`: The Wikipedia title of the target entity  
+- `wikidataID`: The corresponding Wikidata identifier  
+- `domain`: The domain category (Movie, Landmark, or Person)  
+
+## License
+
+The dataset is freely available for research purposes under an open-access license. Please cite our paper if you use this dataset in your work.
+
+
+
 # Generating LLM-Elicited TOT Queries
 This repository contains scripts to generate LLM-Elicited TOT Queries. 
 Synthetic TOT queries generated from this repository were used as test queries for the TREC 2024 Tip of the Tongue (TOT) track and will be used for subsequent tracks.
