@@ -204,7 +204,7 @@ def register(path):
 if __name__ == '__main__':
 
     # path = input("Enter data path:")
-    path = '/home/yifanhe/llm_tot_exp/datasets-mstot'
+    path = '/home/yourpath/llm_tot_exp/datasets-mstot'
 
     register(path.strip())
 
